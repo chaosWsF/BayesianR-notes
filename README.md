@@ -1,0 +1,1 @@
+This repo is notes taken while studying 'Doing Bayesian Data Analysis: A Tutorial with R and BUGS'.
