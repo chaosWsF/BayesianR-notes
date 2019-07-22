@@ -8,14 +8,16 @@ r <- cumsum(flipsequence)
 n <- 1:N
 runprop <- r / n
 
-plot(n, runprop, type = 'o', log = 'x',
+plot(n, runprop,
+     type = "o", log = "x",
      xlim = c(1, N), ylim = c(0.0, 1.0), cex.axis = 1.5,
-     xlab = 'Flip Number', ylab = 'Proportion Heads', cex.lab = 1.5,
-     main = 'Running Proportion of Heads', cex.main = 1.5)
+     xlab = "Flip Number", ylab = "Proportion Heads", cex.lab = 1.5,
+     main = "Running Proportion of Heads", cex.main = 1.5
+)
 lines(c(1, N), c(.5, .5), lty = 3)
 
 # display flipsequence and results in the image
-flipletters <- paste(c('T', 'H')[flipsequence[1:10] + 1], collapse = '')
-displaystring <- paste('Flip Sequence = ', flipletters, '...', sep = '')
+flipletters <- paste(c("T", "H")[flipsequence[1:10] + 1], collapse = "")
+displaystring <- paste("Flip Sequence = ", flipletters, "...", sep = "")
 text(5, .9, displaystring, adj = c(0, 1), cex = 1.3)
-text(N, .3, paste('End Proportion =', runprop[N]), adj = c(1, 0), cex = 1.3)
+text(N, .3, paste("End Proportion =", runprop[N]), adj = c(1, 0), cex = 1.3)
